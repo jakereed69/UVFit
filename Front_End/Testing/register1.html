@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="Images/favicon.ico">
+
+    <title>UVFit New User Registration</title>
+
+    <!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+
+  <body>
+	  
+	  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="navLogo">UVFit</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sr-only" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle sr-only" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Portfolio
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle sr-only" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Other Pages
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+                <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+                <a class="dropdown-item" href="faq.html">FAQ</a>
+                <a class="dropdown-item" href="404.html">404</a>
+                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
+              </div>
+            </li>
+			  <li class="nav-item">
+              <a class="nav-link btn-primary text-center" href="index2.html" id="signInButton">Sign In</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link btn-secondary text-center" href="register1.html" id="signUpButton">Sign Up</a>
+            </li>  
+          </ul>
+        </div>
+      </div>
+    </nav>
+	  
+    <form class="form-signin">
+	<div class="text-center">	
+      <img class="mb-4 mt-3" src="Images/favicon.ico" alt="" width="72" height="72">
+      <h1 class="h1 mb-3 font-weight-normal text-center"><Strong>UVFit</Strong> </h1>
+	  <h1 class="h3 mb-3 font-weight-normal text-center">New User Registration</h1>
+	</div>
+      <label for="inputEmail">Email Address</label>
+      <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+	  <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" class="form-control" placeholder="Full Name" required>
+      <label for="inputPassword">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="Password" required>
+	  <label for="inputPassword">Confirm Password</label>
+      <input type="password" id="passwordConfirm" class="form-control mb-4" placeholder="Confirm Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" id="signup">Create Account</button>
+	  <div id="account" class="mt-2 text-center">Already a User? <a href="index2.html">Sign In</a></div>
+	  <div class="card-text text-danger" id="ServerResponse" style="display: block"></div>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; UVFit 2017-2018</p>
+    </form>
+	 <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
