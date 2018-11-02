@@ -1,8 +1,5 @@
 README FOR BACK END
 
+Replace these files from the repository https://github.com/rlysecky/eceServer18.git
 
-Path to someone elses old 513 projects email api:
-ece513classproject/node_modules/nodemailer/
-
-
-I think that we can just adapt our stuff to the same node libs
+With the files located in our back end folder
