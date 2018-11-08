@@ -1,0 +1,11 @@
+#signInButton, #signUpButton{
+	border-radius: 5px;
+	margin-right: 5px;
+	color: #FFFFFF;
+}
+#navLogo{
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+	color: #FFFFFF;
+	opacity: 0.8;
+	font: 70 30px 'Bitter';
+}

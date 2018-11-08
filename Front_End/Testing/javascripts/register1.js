@@ -1,0 +1,70 @@
+function sendReqForSignup() {
+  var email = document.getElementById("email").value;
+  var fullName = document.getElementById("fullName").value;
+  var password = document.getElementById("password").value;
+  var passwordConfirm = document.getElementById("passwordConfirm").value;
+	
+  var isValid = true;
+    
+  var fullNameRe = /./;
+  var emailRe = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
+  var passwordReLength = /\b[a-zA-Z0-9]{10,20}\b/;
+  var passwordReLowerCase = /[a-z]/;
+  var passwordReUpperCase = /[A-Z]/;
+  var passwordReDigit = /[0-9]/;
+
+  // FIXME: More thorough validation should be performed here. 
+  if (password != passwordConfirm) {
+    var responseDiv = document.getElementById('ServerResponse');
+    responseDiv.style.display = "block";
+    responseDiv.innerHTML = "<p>Password does not match.</p>";
+    return;
+  }
+/*strong password is a password that is difficult to guess. A strong password has the following characteristics:
+
+Does not contain words found in a dictionary or on the web
+Composed of uppercase and lowercase letters, digits, and perhaps punctuation
+At least 10 characters in length
+Has not been used as a password before on the same website or on any other website
+Does not conform to popular password patterns like an initial capital letter, 2-4 digits at the end, or adding ! at the end
+*/
+	
+  
+  var xhr = new XMLHttpRequest();
+  xhr.addEventListener("load", signUpResponse);
+  xhr.responseType = "json";
+  xhr.open("POST", '/users/register');
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.send(JSON.stringify({email:email,fullName:fullName, password:password}));
+}
+
+function signUpResponse() {
+  // 200 is the response code for a successful GET request
+  if (this.status === 201) {
+    if (this.response.success) {
+      // Change current location to the signin page.
+      window.location = "index.html";
+    } 
+    else {
+      responseHTML += "<ol class='ServerResponse'>";
+      for (key in this.response) {
+        responseHTML += "<li> " + key + ": " + this.response[key] + "</li>";
+      }
+      responseHTML += "</ol>";
+    }
+  }
+  else {
+    // Use a span with dark red text for errors
+    responseHTML = "<span class='red-text text-darken-2'>";
+    responseHTML += "Error: " + this.response.error;
+    responseHTML += "</span>"
+  }
+
+  // Update the response div in the webpage and make it visible
+  responseDiv.style.display = "block";
+  responseDiv.innerHTML = responseHTML;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("signup").addEventListener("click", sendReqForSignup);
+});
