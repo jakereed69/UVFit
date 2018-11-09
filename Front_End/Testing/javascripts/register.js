@@ -20,14 +20,6 @@ function sendReqForSignup() {
     responseDiv.innerHTML = "<p>Password does not match.</p>";
     return;
   }
-/*strong password is a password that is difficult to guess. A strong password has the following characteristics:
-
-Does not contain words found in a dictionary or on the web
-Composed of uppercase and lowercase letters, digits, and perhaps punctuation
-At least 10 characters in length
-Has not been used as a password before on the same website or on any other website
-Does not conform to popular password patterns like an initial capital letter, 2-4 digits at the end, or adding ! at the end
-*/
 	
   
   var xhr = new XMLHttpRequest();
