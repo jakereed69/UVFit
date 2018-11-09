@@ -16,7 +16,7 @@
     <link href="stylesheets/signin.css" rel="stylesheet">
 	<link href="stylesheets/navbar.css" rel="stylesheet">
 	  
-	<script src="../../Back_End/public/uvfit/javascripts/register.js" defer></script>
+	<script src="javascripts/register.js" defer></script>
   </head>
 
   <body>
@@ -62,14 +62,14 @@
       <h1 class="h1 mb-3 font-weight-normal text-center"><Strong>UVFit</Strong> </h1>
 	  <h1 class="h3 mb-3 font-weight-normal text-center">New User Registration</h1>
 	</div>
-      <label for="inputEmail" class="mt-1 mb-0">Email Address</label>
-      <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+      <label for="email" class="mt-1 mb-0">Email Address</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
 	  <label for="fullName" class="mt-1 mb-0">Full Name</label>
-      <input type="text" id="fullName" class="form-control" placeholder="Full Name" required>
-      <label for="inputPassword" class="mt-1 mb-0">Password</label>
-      <input type="password" id="password" class="form-control" placeholder="Password" required>
-	  <label for="inputPassword" class="mt-0 mb-0">Confirm Password</label>
-      <input type="password" id="passwordConfirm" class="form-control mb-4" placeholder="Confirm Password" required>
+      <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Full Name" required>
+      <label for="password" class="mt-1 mb-0">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+	  <label for="passwordConfirm" class="mt-0 mb-0">Confirm Password</label>
+      <input type="password" id="passwordConfirm" name="passwordConfirm" class="form-control mb-4" placeholder="Confirm Password" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit" id="signup">Create Account</button>
 	  <div id="account" class="mt-2 text-center">Already a User? <a href="signin.html">Sign In</a></div>
 	  <div class="card-text text-danger" id="ServerResponse" style="display: block"></div>

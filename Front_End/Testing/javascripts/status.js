@@ -28,7 +28,7 @@ function accountInfoError(jqXHR, textStatus, errorThrown) {
    if( jqXHR.status === 401 ) {
       console.log("Invalid auth token");
       window.localStorage.removeItem("authToken");
-      window.location.replace("index.html");
+      window.location.replace("signin.html");
    } 
    else {
      $("#error").html("Error: " + status.message);

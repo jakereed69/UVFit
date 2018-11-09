@@ -35,7 +35,7 @@ function signUpResponse() {
   if (this.status === 201) {
     if (this.response.success) {
       // Change current location to the signin page.
-      window.location = "index.html";
+      window.location = "signin.html";
     } 
     else {
       responseHTML += "<ol class='ServerResponse'>";

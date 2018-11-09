@@ -14,7 +14,7 @@ function signinResponse() {
   // 200 is the response code for a successful GET request
   if (this.status === 201) {
      window.localStorage.setItem("authToken", this.response.token);
-     window.location = "index.html";
+     window.location = "account.html";
   }
   else {
     // Use a span with dark red text for errors
@@ -33,7 +33,7 @@ function signinResponse() {
 
 document.addEventListener("DOMContentLoaded", function() {
   if( window.localStorage.getItem("authToken")) {
-    window.location.replace("index.html");
+    window.location.replace("account.html");
   }
   else {
      document.getElementById("signin").addEventListener("click", sendReqForSignin);
