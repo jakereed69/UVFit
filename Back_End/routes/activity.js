@@ -32,8 +32,7 @@ router.get('/summary/:devid', function(req, res, next) {
       }
       res.status(200).json(responseJson);
     });
-	    
-    
+
 });
 
 router.post('/update', function(req, res, next) { 
@@ -41,7 +40,10 @@ router.post('/update', function(req, res, next) {
         logged: false,
         message : "",
     };
-
+	var js = req.body.data;
+	console.log(js);
+	var obj = JSON.parse(js);
+	console.log(obj.info[1].test);
     // Ensure the request includes the deviceId parameter
     if( !req.body.hasOwnProperty("deviceId")) {
         responseJson.message = "Missing deviceId.";
@@ -71,14 +73,14 @@ router.post('/update', function(req, res, next) {
     Device.findOne({ deviceId: req.body.deviceId }, function(err, device) {
         if (device !== null) {
 	    // log this activity
-
-
+	    console.log(req.body);
 	    // Create a new activity with specified id, times, and sensor info values.
             var newActivity = new Activity({
                 deviceId: req.body.deviceId,
-                start: req.body.start,
-                stop: req.body.stop, 
-		info: req.body.info
+                long: req.body.long,
+                lat: req.body.lat, 
+		speed: req.body.speed,
+		uv: req.body.uv
             });
 
  	    // Save activity. If successful, return success. If not, return error message.
